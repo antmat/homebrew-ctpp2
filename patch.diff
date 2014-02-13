@@ -9,3 +9,13 @@
  #include "CTPP2FileSourceLoader.hpp"
 
 
+--- A/tests/CTPP2Emulator.cpp	2014-02-13 12:24:19.000000000 +0700
++++ B/tests/CTPP2Emulator.cpp	2014-02-13 12:24:31.000000000 +0700
+@@ -30,6 +30,7 @@
+  * $CTPP$
+  */
+
++#include <memory>
+ #include <CTPP2JSONParser.hpp>
+ #include <CTPP2FileOutputCollector.hpp>
+ #include <CTPP2FileLogger.hpp>
