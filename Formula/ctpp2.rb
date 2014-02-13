@@ -10,6 +10,8 @@ class Ctpp2 < Formula
 
   def install
     system "cmake #{std_cmake_parameters} ."
+    system "make install" 
+    include.install "include/ctpp2" => "ctpp2"
   end
 
 end
