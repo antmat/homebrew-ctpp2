@@ -13,6 +13,11 @@ class Ctpp2 < Formula
       EOS
   end
 
+  def patches
+    # fixes build on mac os (getpwd definition)
+    "https://raw.github.com/antmat/homebrew-ctpp2/master/patch.diff"
+  end
+
   def install
     system "mkdir -p build && cd build && cmake -DCMAKE_CXX_COMPILER=`ls /usr/local/bin/g++* | tail -n1` #{std_cmake_parameters} .. && make install && cd .."
     include.install "include" => "ctpp2"
